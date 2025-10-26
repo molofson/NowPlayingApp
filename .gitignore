@@ -1,0 +1,10 @@
+/.build
+.DS_Store
+/.swiftpm
+/.swift-version
+*.xcuserdatad
+*.xcworkspace
+xcuserdata/
+Package.resolved
+/.vscode
+*.swp
