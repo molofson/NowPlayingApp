@@ -1,0 +1,305 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.NowPlayingApp-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.build/sources",
+      "importPath" : "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/molofson/repos/NowPlayingApp/Sources/NowPlayingApp/ContentView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/molofson/repos/NowPlayingApp/Sources/NowPlayingApp/MusicStateModel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/molofson/repos/NowPlayingApp/Sources/NowPlayingApp/main.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "NowPlayingApp",
+      "moduleOutputPath" : "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/Modules/NowPlayingApp.swiftmodule",
+      "objects" : [
+        "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.build/ContentView.swift.o",
+        "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.build/MusicStateModel.swift.o",
+        "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.build/main.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-v",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j12",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "NowPlayingApp_main",
+        "-color-diagnostics",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "nowplayingapp"
+      ],
+      "outputFileMapPath" : "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.build/ContentView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.build/MusicStateModel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.build/main.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/Modules/NowPlayingApp.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/molofson/repos/NowPlayingApp/Sources/NowPlayingApp/ContentView.swift",
+        "/Users/molofson/repos/NowPlayingApp/Sources/NowPlayingApp/MusicStateModel.swift",
+        "/Users/molofson/repos/NowPlayingApp/Sources/NowPlayingApp/main.swift"
+      ],
+      "tempsPath" : "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "NowPlayingApp" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "NowPlayingApp",
+      "-package-name",
+      "nowplayingapp",
+      "-c",
+      "/Users/molofson/repos/NowPlayingApp/Sources/NowPlayingApp/ContentView.swift",
+      "/Users/molofson/repos/NowPlayingApp/Sources/NowPlayingApp/MusicStateModel.swift",
+      "/Users/molofson/repos/NowPlayingApp/Sources/NowPlayingApp/main.swift",
+      "-I",
+      "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-v",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j12",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "NowPlayingApp_main",
+      "-color-diagnostics",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "nowplayingapp",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "NowPlayingApp" : [
+
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp-entitlement.plist" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<entitlement-plist>"
+        },
+        {
+          "kind" : "virtual",
+          "name" : "<com.apple.security.get-task-allow>"
+        }
+      ],
+      "outputFilePath" : "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp-entitlement.plist"
+    },
+    "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/molofson/repos/NowPlayingApp/Sources/NowPlayingApp/ContentView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/molofson/repos/NowPlayingApp/Sources/NowPlayingApp/MusicStateModel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/molofson/repos/NowPlayingApp/Sources/NowPlayingApp/main.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.build/sources"
+    },
+    "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.build/ContentView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.build/MusicStateModel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.build/main.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.product/Objects.LinkFileList"
+    },
+    "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "": {
+    "swift-dependencies": "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.build/master.swiftdeps"
+  },
+  "/Users/molofson/repos/NowPlayingApp/Sources/NowPlayingApp/ContentView.swift": {
+    "dependencies": "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.build/ContentView.d",
+    "object": "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.build/ContentView.swift.o",
+    "swiftmodule": "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.build/ContentView~partial.swiftmodule",
+    "swift-dependencies": "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.build/ContentView.swiftdeps",
+    "diagnostics": "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.build/ContentView.dia"
+  },
+  "/Users/molofson/repos/NowPlayingApp/Sources/NowPlayingApp/MusicStateModel.swift": {
+    "dependencies": "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.build/MusicStateModel.d",
+    "object": "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.build/MusicStateModel.swift.o",
+    "swiftmodule": "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.build/MusicStateModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.build/MusicStateModel.swiftdeps",
+    "diagnostics": "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.build/MusicStateModel.dia"
+  },
+  "/Users/molofson/repos/NowPlayingApp/Sources/NowPlayingApp/main.swift": {
+    "dependencies": "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.build/main.d",
+    "object": "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.build/main.swift.o",
+    "swiftmodule": "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.build/main.swiftdeps",
+    "diagnostics": "/Users/molofson/repos/NowPlayingApp/.build/arm64-apple-macosx/debug/NowPlayingApp.build/main.dia"
+  }
+}
