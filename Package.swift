@@ -14,5 +14,10 @@ let package = Package(
             dependencies: [],
             path: "Sources/NowPlayingApp"
         )
+        , .testTarget(
+            name: "NowPlayingAppTests",
+            dependencies: ["NowPlayingApp"],
+            path: "Tests/NowPlayingAppTests"
+        )
     ]
 )
