@@ -12,9 +12,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Install Swift
-        uses: fwal/setup-swift@v2
+      - name: Select Xcode
+        uses: actions/setup-xcode@v3
         with:
-          swift-version: '5.9'
+          xcode-version: '16.4'
       - name: Use Makefile for CI
         run: make ci
