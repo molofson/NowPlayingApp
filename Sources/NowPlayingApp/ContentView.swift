@@ -52,7 +52,7 @@ struct ContentView: View {
 
                 // MusicKit panel
                 VStack(alignment: .leading, spacing: 6) {
-                    HStack { Text("MusicKit").font(.headline); Spacer(); Button("Refresh") { model.runMusicKitDiagnostic() } }
+                    HStack { Text("MusicKit").font(.headline); Spacer(); Button("Refresh") { Task { await model.runMusicKitDiagnostic() } } }
                     Text(model.musicKitDiag)
                         .font(.caption)
                 }
@@ -61,7 +61,7 @@ struct ContentView: View {
 
                 // MediaPlayer panel
                 VStack(alignment: .leading, spacing: 6) {
-                    HStack { Text("MediaPlayer").font(.headline); Spacer(); Button("Refresh") { model.runMediaPlayerDiagnostic() } }
+                    HStack { Text("MediaPlayer").font(.headline); Spacer(); Button("Refresh") { Task { await model.runMediaPlayerDiagnostic() } } }
                     Text(model.mediaPlayerDiag)
                         .font(.caption)
                 }
