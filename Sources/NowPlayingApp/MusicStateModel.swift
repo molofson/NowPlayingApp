@@ -184,8 +184,8 @@ final class MusicStateModel: ObservableObject {
     @MainActor
     func runMediaPlayerDiagnostic() async {
         // Without importing MediaPlayer, check at runtime for MPNowPlayingInfoCenter
-        let cls = NSClassFromString("MPNowPlayingInfoCenter")
-        let available = (cls != nil)
+    let cls: AnyClass? = NSClassFromString("MPNowPlayingInfoCenter")
+    let available = (cls != nil)
         self.mediaPlayerDiag = available ? "MPNowPlayingInfoCenter available (class present)" : "MPNowPlayingInfoCenter NOT available"
     }
 

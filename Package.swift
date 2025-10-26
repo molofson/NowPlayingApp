@@ -12,7 +12,12 @@ let package = Package(
         .executableTarget(
             name: "NowPlayingApp",
             dependencies: [],
-            path: "Sources/NowPlayingApp"
+            path: "Sources/NowPlayingApp",
+            swiftSettings: [
+                // Treat warnings as errors to enforce clean builds
+                .unsafeFlags(["-warnings-as-errors"], .when(configuration: .debug)),
+                .unsafeFlags(["-warnings-as-errors"], .when(configuration: .release))
+            ]
         )
         , .testTarget(
             name: "NowPlayingAppTests",
