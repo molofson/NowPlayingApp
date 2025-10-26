@@ -128,14 +128,21 @@ final class MusicStateModel: ObservableObject {
                 parsedDur = parts[4]
                 parsedHasLoc = parts[5]
             }
+            // copy parsed values into local lets to avoid capturing vars into concurrent closure
+            let sState = parsedState
+            let sTitle = parsedTitle.isEmpty ? "-" : parsedTitle
+            let sArtist = parsedArtist.isEmpty ? "-" : parsedArtist
+            let sPos = parsedPos
+            let sDur = parsedDur
+            let sHasLoc = (parsedHasLoc.lowercased() == "true")
             await MainActor.run {
                 self.appleScriptDiag = out
-                self.appleScriptState = parsedState
-                self.appleScriptTitle = parsedTitle.isEmpty ? "-" : parsedTitle
-                self.appleScriptArtist = parsedArtist.isEmpty ? "-" : parsedArtist
-                self.appleScriptPosition = parsedPos
-                self.appleScriptDuration = parsedDur
-                self.hasLocation = (parsedHasLoc.lowercased() == "true")
+                self.appleScriptState = sState
+                self.appleScriptTitle = sTitle
+                self.appleScriptArtist = sArtist
+                self.appleScriptPosition = sPos
+                self.appleScriptDuration = sDur
+                self.hasLocation = sHasLoc
             }
         } catch {
             await MainActor.run {
