@@ -7,15 +7,21 @@ final class MusicKitManager {
     static let shared = MusicKitManager()
 
     // Developer token should be fetched from your server and not embedded in the app.
-    private var developerToken: String?
-    private var userToken: String?
+    private var developerToken: String? {
+        get { KeychainHelper.shared.string(forKey: "nowplaying.developerToken") }
+        set { KeychainHelper.shared.set(string: newValue, forKey: "nowplaying.developerToken") }
+    }
+    private var userToken: String? {
+        get { KeychainHelper.shared.string(forKey: "nowplaying.userToken") }
+        set { KeychainHelper.shared.set(string: newValue, forKey: "nowplaying.userToken") }
+    }
 
     var isConfigured: Bool {
         return developerToken != nil
     }
 
     func configure(developerToken: String?) {
-        self.developerToken = developerToken
+    self.developerToken = developerToken
     }
 
     /// Placeholder: request a user token. In production, exchange developer token on a secure server.
@@ -30,7 +36,7 @@ final class MusicKitManager {
     }
 
     func clear() {
-        developerToken = nil
-        userToken = nil
+    KeychainHelper.shared.delete(key: "nowplaying.developerToken")
+    KeychainHelper.shared.delete(key: "nowplaying.userToken")
     }
 }
