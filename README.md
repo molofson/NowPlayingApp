@@ -1,3 +1,5 @@
+[![CI](https://github.com/molofson/NowPlayingApp/actions/workflows/ci.yml/badge.svg)](https://github.com/molofson/NowPlayingApp/actions/workflows/ci.yml)
+
 NowPlayingApp
 ===============
 
