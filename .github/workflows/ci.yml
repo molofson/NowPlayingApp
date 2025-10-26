@@ -13,8 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Select Xcode
-        run: |
-          echo "Selecting Xcode 16.4"
-          sudo xcode-select -s /Applications/Xcode_16.4.app/Contents/Developer || true
+        uses: maxim-lobanov/setup-xcode@v1.6.0
+        with:
+          xcode-version: '16.4'
       - name: Use Makefile for CI
         run: make ci
