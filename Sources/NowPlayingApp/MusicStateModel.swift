@@ -128,7 +128,7 @@ final class MusicStateModel: ObservableObject {
                 parsedDur = parts[4]
                 parsedHasLoc = parts[5]
             }
-            DispatchQueue.main.async {
+            await MainActor.run {
                 self.appleScriptDiag = out
                 self.appleScriptState = parsedState
                 self.appleScriptTitle = parsedTitle.isEmpty ? "-" : parsedTitle
@@ -138,7 +138,7 @@ final class MusicStateModel: ObservableObject {
                 self.hasLocation = (parsedHasLoc.lowercased() == "true")
             }
         } catch {
-            DispatchQueue.main.async {
+            await MainActor.run {
                 self.appleScriptDiag = "(failed to run osascript)\n\(error)"
             }
         }
@@ -169,26 +169,24 @@ final class MusicStateModel: ObservableObject {
         // include AppleScript snapshot
         let asSnapshot = "AppleScript: state=\(appleScriptState) title=\(appleScriptTitle) artist=\(appleScriptArtist) pos=\(appleScriptPosition) dur=\(appleScriptDuration) hasLocation=\(hasLocation)"
         let combined = asSnapshot + "\n\n" + report
-        DispatchQueue.main.async {
+        await MainActor.run {
             self.privateAPIDiag = combined
         }
     }
 
-    func runMediaPlayerDiagnostic() {
+    @MainActor
+    func runMediaPlayerDiagnostic() async {
         // Without importing MediaPlayer, check at runtime for MPNowPlayingInfoCenter
         let cls = NSClassFromString("MPNowPlayingInfoCenter")
         let available = (cls != nil)
-        DispatchQueue.main.async {
-            self.mediaPlayerDiag = available ? "MPNowPlayingInfoCenter available (class present)" : "MPNowPlayingInfoCenter NOT available"
-        }
+        self.mediaPlayerDiag = available ? "MPNowPlayingInfoCenter available (class present)" : "MPNowPlayingInfoCenter NOT available"
     }
 
-    func runMusicKitDiagnostic() {
+    @MainActor
+    func runMusicKitDiagnostic() async {
         // Placeholder: MusicKit integration requires entitlements and developer configuration
         let report = "MusicKit: not implemented — requires MusicKit entitlements and user tokens"
-        DispatchQueue.main.async {
-            self.musicKitDiag = report
-        }
+        self.musicKitDiag = report
     }
 
     /// Run AppleScript and Private-API checks first, then MediaPlayer check (a, b, then d)
@@ -198,8 +196,8 @@ final class MusicStateModel: ObservableObject {
             await runPrivateAPIDiagnostic()
             // run MediaPlayer after a short delay to simulate ordering
             try? await Task.sleep(nanoseconds: 500_000_000)
-            self.runMediaPlayerDiagnostic()
-            self.runMusicKitDiagnostic()
+            await runMediaPlayerDiagnostic()
+            await runMusicKitDiagnostic()
         }
     }
 
@@ -271,7 +269,7 @@ final class MusicStateModel: ObservableObject {
                     let dur = Double(parts[4]) ?? 0
                     let hasLocStr = parts[5].lowercased()
                     let hasLoc = (hasLocStr == "true")
-                    DispatchQueue.main.async {
+                    await MainActor.run {
                         self.isPlaying = (state == "PLAYING")
                         self.trackTitle = title.isEmpty ? "-" : title
                         self.trackArtist = artist.isEmpty ? "-" : artist
@@ -282,7 +280,7 @@ final class MusicStateModel: ObservableObject {
                 }
             }
         } catch {
-            DispatchQueue.main.async {
+            await MainActor.run {
                 self.isPlaying = false
                 self.trackTitle = "-"
                 self.trackArtist = "-"
