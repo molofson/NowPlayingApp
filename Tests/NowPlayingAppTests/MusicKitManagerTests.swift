@@ -13,4 +13,13 @@ final class MusicKitManagerTests: XCTestCase {
             // expected
         }
     }
+
+    func testConfiguredManagerReturnsFakeToken() async throws {
+        let mgr = MusicKitManager.shared
+        mgr.clear()
+        mgr.configure(developerToken: "DEV_TOKEN")
+        XCTAssertTrue(mgr.isConfigured)
+        let token = try await mgr.requestUserToken()
+        XCTAssertEqual(token, "FAKE_USER_TOKEN")
+    }
 }
