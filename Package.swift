@@ -15,8 +15,9 @@ let package = Package(
             path: "Sources/NowPlayingApp",
             swiftSettings: [
                 // Treat warnings as errors to enforce clean builds
-                .unsafeFlags(["-warnings-as-errors"], .when(configuration: .debug)),
-                .unsafeFlags(["-warnings-as-errors"], .when(configuration: .release))
+                // pass through to the Swift frontend
+                .unsafeFlags(["-Xfrontend","-warnings-as-errors"], .when(configuration: .debug)),
+                .unsafeFlags(["-Xfrontend","-warnings-as-errors"], .when(configuration: .release))
             ]
         )
         , .testTarget(
