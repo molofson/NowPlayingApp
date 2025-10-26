@@ -31,14 +31,19 @@ final class MusicStateModel: ObservableObject {
         if isPlaying && !hasLocation {
             return "Streaming — metadata unavailable"
         }
-        if trackTitle == "-" && trackArtist == "-" {
+        let artistDisplay: String
+        if trackArtist.isEmpty || trackArtist == "-" {
+            artistDisplay = "Artist unknown"
+        } else {
+            artistDisplay = trackArtist
+        }
+        if trackTitle == "-" && (trackArtist == "-" || trackArtist.isEmpty) {
             return "No track information"
         }
-        return "\(trackTitle) — \(trackArtist)"
+        return "\(trackTitle) — \(artistDisplay)"
     }
 
     var trackTimeDisplay: String {
-        guard durationSeconds > 0 else { return "-" }
         func fmt(_ s: Double) -> String {
             let i = Int(s)
             let mm = i / 60
