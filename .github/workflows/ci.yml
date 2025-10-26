@@ -16,7 +16,5 @@ jobs:
         uses: fwal/setup-swift@v2
         with:
           swift-version: '5.9'
-      - name: Build
-        run: swift build --configuration debug
-      - name: Test
-        run: swift test --parallel
+      - name: Use Makefile for CI
+        run: make ci
